@@ -1,0 +1,193 @@
+/* Gaya khusus layar Detail Karya */
+
+/* ---------- Pemutar Media / Video ---------- */
+.pemutar-media {
+  position: relative;
+  width: 100%;
+  height: 230px;
+  background: var(--warna-pemutar, #0B2540);
+  color: var(--warna-putih);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.pemutar-media__tombol {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--sudut-pil);
+  background: var(--warna-putih);
+  color: var(--warna-pemutar, #0B2540);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.15s ease;
+}
+
+.pemutar-media__tombol:hover {
+  transform: scale(1.05);
+}
+
+.pemutar-media__tombol:active {
+  transform: scale(0.96);
+}
+
+.pemutar-media__info {
+  position: absolute;
+  bottom: var(--jarak-3);
+  left: var(--jarak-4);
+  font-size: var(--teks-ket);
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+  pointer-events: none;
+}
+
+.pemutar-media__iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ---------- Header Konten: Tag & Judul ---------- */
+.detail-kepala {
+  display: flex;
+  flex-direction: column;
+  gap: var(--jarak-2);
+}
+
+.detail-tag {
+  display: flex;
+  align-items: center;
+  gap: var(--jarak-2);
+  flex-wrap: wrap;
+}
+
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  padding: 0 12px;
+  border-radius: var(--sudut-pil);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.tag-pill--kategori {
+  background: var(--kat-bg, var(--warna-latar));
+  color: var(--kat-fg, var(--warna-tua));
+}
+
+.tag-pill--genre {
+  background: #F1F5F9;
+  color: #475569;
+}
+
+.detail-judul {
+  font-size: var(--teks-layar);
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--warna-teks);
+}
+
+/* ---------- Kartu Kreator ---------- */
+.kartu-kreator {
+  display: flex;
+  align-items: center;
+  gap: var(--jarak-3);
+  padding: 12px var(--jarak-4);
+  background: var(--warna-latar-lembut);
+  border-radius: var(--sudut-besar);
+}
+
+.kartu-kreator__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--sudut-pil);
+  background: var(--warna-utama);
+  color: var(--warna-putih);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 15px;
+  flex-shrink: 0;
+  letter-spacing: 0.5px;
+}
+
+.kartu-kreator__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.kartu-kreator__nama {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--warna-teks);
+  line-height: 1.2;
+}
+
+.kartu-kreator__sub {
+  font-size: 12px;
+  color: var(--warna-redup);
+  line-height: 1.3;
+}
+
+.kartu-kreator__tautan {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--warna-utama);
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* ---------- Grid Metadata (3 Kolom) ---------- */
+.grid-meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--jarak-2);
+}
+
+.kartu-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px var(--jarak-3);
+  border: 1px solid var(--warna-garis);
+  border-radius: var(--sudut-sedang);
+  background: var(--warna-putih);
+}
+
+.kartu-meta__label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--warna-redup);
+}
+
+.kartu-meta__nilai {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--warna-teks);
+  line-height: 1.25;
+  word-break: break-word;
+}
+
+/* ---------- Baris Tombol Aksi ---------- */
+.baris-aksi {
+  display: flex;
+  gap: var(--jarak-3);
+}
+
+@media (max-width: 360px) {
+  .baris-aksi {
+    flex-direction: column;
+  }
+}
