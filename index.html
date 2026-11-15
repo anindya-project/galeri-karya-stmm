@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0179BB">
+  <title>Galeri Karya STMM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/halaman/beranda.css">
+</head>
+<body data-halaman="beranda">
+  <div class="app">
+    <!-- Tim 1 · Layar Beranda -->
+    <header class="bilah-atas">
+      <a class="merek" href="index.html">
+        <img src="assets/logo-stmm.png" alt="Logo STMM">
+        <span>
+          <span class="merek__kecil">Galeri Karya</span>
+          <span class="merek__besar">STMM</span>
+        </span>
+      </a>
+      <a class="ikon-tombol ikon-tombol--lembut" href="cari.html" aria-label="Cari karya" id="tombol-cari"></a>
+    </header>
+
+    <main class="konten">
+      <section class="bagian">
+        <h2 class="judul-bagian">Karya Unggulan</h2>
+        <div id="unggulan"></div>
+      </section>
+
+      <section class="bagian">
+        <h2 class="judul-bagian">Jelajahi Kategori</h2>
+        <div class="deret-chip deret-chip--geser" id="daftar-kategori"></div>
+      </section>
+
+      <section class="bagian">
+        <div class="bagian__kepala">
+          <h2 class="judul-bagian">Karya Terbaru</h2>
+          <a class="tautan-kecil" href="kategori.html">Lihat semua</a>
+        </div>
+        <div class="grid-2" id="karya-terbaru"></div>
+      </section>
+    </main>
+
+    <nav class="nav-bawah" id="nav-bawah" aria-label="Navigasi utama"></nav>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/halaman/beranda.js"></script>
+</body>
+</html>
